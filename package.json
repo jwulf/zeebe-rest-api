@@ -1,0 +1,27 @@
+{
+  "name": "zeebe-rest-api",
+  "version": "1.0.0",
+  "description": "How do I access Zeebe over REST? Some ideas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwulf/zeebe-rest-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwulf/zeebe-rest-api/issues"
+  },
+  "homepage": "https://github.com/jwulf/zeebe-rest-api#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "zeebe-node": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1"
+  }
+}
