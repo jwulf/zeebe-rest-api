@@ -2,10 +2,6 @@
 
 How do I access Zeebe over REST? Some ideas.
 
-## Synchronous Response
-
-Uses an event emitter to pass a result from a workflow execution to a HTTP response.
-
 ### Prerequisites
 
 * Node.js
@@ -17,6 +13,10 @@ Uses an event emitter to pass a result from a workflow execution to a HTTP respo
 npm i -g ts-node
 npm i
 ```
+
+## Synchronous Response
+
+Uses an event emitter to pass a result from a workflow execution to a HTTP response.
 
 ### To Run:
 
@@ -30,4 +30,30 @@ You'll see output like this:
 zeebe-rest-api on  master [?] is 📦 v1.0.0 via ⬢ v10.9.0
 ➜ curl 127.0.0.1:3000
 {"number":0.7504228909151884}%
+```
+
+## Callback Route
+
+Cache the outcome of a workflow, and send the client a results URL that it can poll.
+
+### To Run:
+
+1. Start the Zeebe broker.
+2. Start the REST Server (starts workers and deploys workflow): `ts-node src/synchronous-response/index.ts`.
+3. Open [127.0.0.1:3000](http://127.0.0.1:3000) (or `curl` it).
+
+You'll see output like this:
+
+```
+zeebe-rest-api on  master [!?] is 📦 v1.0.0 via ⬢ v10.9.0
+➜ curl 127.0.0.1:3000
+{"resultsUrl":"http://127.0.0.1:300/results/9685"}%
+```
+
+Now, curl the resultsUrl to collect the result:
+
+```
+zeebe-rest-api on  master [!?] is 📦 v1.0.0 via ⬢ v10.9.0
+➜ curl http://127.0.0.1:3000/results/9685
+{"status":"Done","result":0.8547789402934958}%
 ```
