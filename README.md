@@ -9,7 +9,7 @@ Uses an event emitter to pass a result from a workflow execution to a HTTP respo
 ### Prerequisites
 
 * Node.js
-* Zeebe](https://zeebe.io)
+* Zeebe](https://zeebe.io) - Docker compose config [here](https://github.com/jwulf/zeebe-operate-docker)
 
 ### To Install
 
