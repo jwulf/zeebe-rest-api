@@ -5,7 +5,7 @@ How do I wrap a workflow with a single REST request-response in Zeebe? That is t
 ### Prerequisites
 
 * Node.js
-* Zeebe](https://zeebe.io) - Docker compose config [here](https://github.com/jwulf/zeebe-operate-docker)
+* [Zeebe](https://zeebe.io) - Docker compose config [here](https://github.com/jwulf/zeebe-operate-docker)
 
 ### To Install
 
