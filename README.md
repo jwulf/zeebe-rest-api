@@ -1,6 +1,6 @@
 # zeebe-rest-api
 
-How do I access Zeebe over REST? Some ideas.
+How do I wrap a workflow with a single REST request-response in Zeebe? That is to say: create an instance on the request, and send some final output of the workflow in the response. Here are two different ways to do that.
 
 ### Prerequisites
 
@@ -14,7 +14,7 @@ npm i -g ts-node
 npm i
 ```
 
-## Synchronous Response
+## 1. Synchronous Response
 
 Uses an event emitter to pass a result from a workflow execution to a HTTP response.
 
@@ -32,7 +32,7 @@ zeebe-rest-api on  master [?] is 📦 v1.0.0 via ⬢ v10.9.0
 {"number":0.7504228909151884}%
 ```
 
-## Callback Route
+## 2. Callback Route
 
 Cache the outcome of a workflow, and send the client a results URL that it can poll.
 
