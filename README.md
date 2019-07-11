@@ -32,6 +32,8 @@ zeebe-rest-api on  master [?] is 📦 v1.0.0 via ⬢ v10.9.0
 {"number":0.7504228909151884}%
 ```
 
+This relies on a workers running on a single Node process for affinity. To extend this to a scalable pool of workers, you would need to use a distributed pub/sub broker like Redis or Hazelcast.
+
 ## 2. Callback Route
 
 Cache the outcome of a workflow, and send the client a results URL that it can poll.
