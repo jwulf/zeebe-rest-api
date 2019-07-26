@@ -11,7 +11,7 @@ const app = express();
 const port = 3000;
 
 async function main() {
-  await zb.deployWorkflow("./bpmn/random-number.bpmn", { redeploy: false });
+  await zb.deployWorkflow("./bpmn/random-number.bpmn");
   zb.createWorker("worker1", "generate-random-number", (job, complete) => {
     complete({
       number: Math.random()
