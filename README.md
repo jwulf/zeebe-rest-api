@@ -62,4 +62,4 @@ zeebe-rest-api on  master [!?] is 📦 v1.0.0 via ⬢ v10.9.0
 
 ## Scaling the workers
 
-Note that this will only work when you have a single worker, running in the same process as the REST server. With more than one worker, you cannot guarantee affinity. To do that, you need to implement distributed pub/sub using Redis. You can see a proof-of-concept that uses a singleton affinity process on the network and websockets here: https://github.com/jwulf/zeebe-affinity-service
+Note that this will only work when you have a single worker, running in the same process as the REST server. With more than one worker, you cannot guarantee affinity. To do that, you need to implement distributed pub/sub using Redis or similar. You can see a proof-of-concept that uses a singleton affinity process on the network and websockets here: https://github.com/jwulf/zeebe-affinity-service
