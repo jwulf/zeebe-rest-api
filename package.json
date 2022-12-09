@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/jwulf/zeebe-rest-api#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "zeebe-node": "^v0.20.1"
   },
   "devDependencies": {
